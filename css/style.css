@@ -25,8 +25,14 @@ img {
   HEADER
 ------------------ */
 header {
-  height: 70px;
+  height: 4.375rem;
+  padding: 0.625rem;
   background-color: #112030;
+}
+.logo {
+  margin-left: 6.25rem;
+  filter: invert(87%) sepia(67%) saturate(4114%) hue-rotate(65deg)
+    brightness(85%) contrast(98%);
 }
 /* ------------------
   MAIN
@@ -38,11 +44,12 @@ main {
 }
 .card {
   text-align: center;
-  width: calc(33.333% - 160px);
+  width: calc(33.333% - 10rem);
   margin: 0 5rem;
   padding: 1.875rem 3.75rem;
   color: white;
   background-color: #112030;
+  border-radius: 0.625rem;
   margin-bottom: 5.625rem;
 }
 .card > * {
