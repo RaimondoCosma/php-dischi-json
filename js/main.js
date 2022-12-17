@@ -4,7 +4,7 @@ createApp({
   data() {
     return {
       disks: [],
-      diskClicked: "",
+      diskClicked: 0,
       active: false,
     };
   },
@@ -14,7 +14,7 @@ createApp({
       this.diskClicked = index;
     },
     toggleOffcanvas() {
-      this.active = !this.active;
+      this.active = true;
     },
   },
   created() {

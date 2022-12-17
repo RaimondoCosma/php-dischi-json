@@ -23,9 +23,9 @@
         <a href="#"><img class="logo" src="img/logo-small.svg" alt="logo" /></a>
       </header>
       <main>
-        <section class="container">
+        <section class="container" @click="active = false">
           <div
-            @click="getIndex(index)"
+            @click.stop="getIndex(index)"
             class="card"
             v-for="disk, index in disks"
           >
@@ -37,11 +37,7 @@
             <h3>{{disk.year}}</h3>
           </div>
         </section>
-        <div
-          v-if="diskClicked !== ''"
-          class="my-offcanvas"
-          :class="{active: active === true}"
-        >
+        <div class="my-offcanvas" :class="{active: active === true}">
           <div class="cross" @click="active = false">
             <i class="fa-solid fa-xmark"></i>
           </div>
