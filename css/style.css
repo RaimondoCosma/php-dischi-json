@@ -25,14 +25,29 @@ img {
   HEADER
 ------------------ */
 header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 4.375rem;
-  padding: 0.625rem;
+  padding: 0 5rem;
   background-color: #112030;
 }
 .logo {
-  margin-left: 6.25rem;
   filter: invert(87%) sepia(67%) saturate(4114%) hue-rotate(65deg)
     brightness(85%) contrast(98%);
+  width: 2.8125rem;
+}
+form select,
+form button {
+  font-size: 1.25rem;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.3125rem;
+}
+form button {
+  margin-left: 0.625rem;
+  color: white;
+  background-color: rgb(54, 54, 224);
+  border: 1px solid rgb(54, 54, 224);
 }
 /* ------------------
   MAIN
@@ -58,6 +73,13 @@ main {
 }
 .img {
   margin-bottom: 1.875rem;
+  overflow: hidden;
+}
+.album {
+  transition: transform 0.2s linear;
+}
+.album:hover {
+  transform: scale(1.05);
 }
 
 /* ------------------
