@@ -30,14 +30,18 @@ createApp({
           },
         })
         .then((resp) => {
-          this.disks = [];
-          resp.data.forEach((element) => {
-            if (element.genre.toLowerCase() === this.genre.toLowerCase()) {
-              this.disks.push(element);
-            } else if (this.genre === "") {
-              this.disks.push(element);
-            }
-          });
+          // Filtro Frontend
+          // this.disks = [];
+          // resp.data.forEach((element) => {
+          //   if (element.genre.toLowerCase() === this.genre.toLowerCase()) {
+          //     this.disks.push(element);
+          //   } else if (this.genre === "") {
+          //     this.disks.push(element);
+          //   }
+          // });
+
+          // Filtro Backend
+          this.disks = resp.data;
         });
     },
   },

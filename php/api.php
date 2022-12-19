@@ -1,8 +1,12 @@
 <?php 
 $disks = file_get_contents("../dischi.json");
-$disks = json_decode($disks, true);
 //Nel caso volessi manipolare i dati
-
-$json_disks = json_encode($disks);
+// Filtro per genere Backend
+if(!empty($_GET['genre'])){
+    $disks = json_decode($disks, true);
+    $disks = array_filter($disks, fn($elm) => strtolower($elm['genre']) === strtolower($_GET['genre']));
+    $disks = json_encode($disks);
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                           
 header("Content-Type: application/json");
-echo $json_disks;
+echo $disks;
